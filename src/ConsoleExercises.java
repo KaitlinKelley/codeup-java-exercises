@@ -21,11 +21,54 @@ public class ConsoleExercises {
 //
 //        System.out.printf("The three words you entered are: %n1.%s %n2.%s %n3.%s", firstWord, secondWord, thirdWord);
 
-        System.out.printf("Please type in a sentence:%n");
+//        userInput.useDelimiter("/n");
 
-        String sentence = userInput.nextLine();
+//        System.out.printf("Please type in a sentence:%n");
+//
+//        String sentence = userInput.nextLine();
+//
+//        System.out.printf("Your sentence was: %s.", sentence);
 
-        System.out.printf("Your sentence was: %s.", sentence);
+
+//        System.out.printf("Please enter a length and width and height:%n");
+//
+//        String length = userInput.nextLine();
+//
+//        String width = userInput.nextLine();
+//
+//        String height = userInput.nextLine();
+//
+//        float lengthInt = Float.parseFloat(length);
+//        float widthInt = Float.parseFloat(width);
+//        float heightNum = Float.parseFloat(height);
+//
+//        float perimeter = lengthInt*2 + widthInt*2;
+//        float area = lengthInt*widthInt;
+//        float volume = area*heightNum;
+//
+//        System.out.printf("The perimeter is %f and the area is %f and the volume is %f", perimeter, area, volume);
+
+//        Rewrite to use nextInt method
+        userInput.useDelimiter("/n");
+
+        System.out.printf("Please enter a length and width and height:%n");
+
+
+        int length = userInput.nextInt();
+        int width = userInput.nextInt();
+        int height = userInput.nextInt();
+
+        System.out.println(length);
+        System.out.println(width);
+        System.out.println(height);
+
+
+//        int perimeter = length*2 + width*2;
+//        int area = length*width;
+//        int volume = area*height;
+
+        System.out.printf("The perimeter is %d and the area is %d and the volume is %d", length*2 + width*2, length*width, length*height*width);
+
 
     }
 }
