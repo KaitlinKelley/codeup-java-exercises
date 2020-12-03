@@ -153,6 +153,7 @@ public class ControlFlowExercises {
 
             int userGrade = userInput.nextInt();
 
+
             if(userGrade >= 88 && userGrade <= 100){
                 System.out.println("Your grade is an A.");
             }else if(userGrade >=80 && userGrade <= 87){
@@ -162,7 +163,7 @@ public class ControlFlowExercises {
             }else if(userGrade >=60 && userGrade <= 66){
                 System.out.println("Your grade is a D.");
             }else {
-                System.out.println("You have an F.");
+                System.out.println("You have an F. Work harder.");
             }
             System.out.println("Would you like to enter another grade? y or n");
 
