@@ -134,11 +134,11 @@ public class ConsoleIoLecture{
         // >>>> .nextLine() method
         // .nextLine() Returns the rest of the current line
 
-        System.out.println("Enter your favorite quote.");
-
-        String quote = userInput.nextLine();
-
-        System.out.println(quote);
+//        System.out.println("Enter your favorite quote.");
+//
+//        String quote = userInput.nextLine();
+//
+//        System.out.println(quote);
 
 
 
