@@ -84,41 +84,97 @@ public class ControlFlowExercises {
 //            }
 //        }
 
+
+//        Display a table of powers.
+//
+//                Prompt the user to enter an integer.
+//        Display a table of squares and cubes from 1 to the value entered.
+//        Ask if the user wants to continue.
+//        Assume that the user will enter valid data.
+//        Only continue if the user agrees to.
+
         Scanner userInput = new Scanner(System.in);
 
+//        while(true){
+//            System.out.println("What number would you like to go up to?\n");
+//
+//            int maxNum = userInput.nextInt();
+//            String spacerXXs = "   | ";
+//            String spacerXs = "     | ";
+//            String spacerSmall = "      | ";
+//            String spacerMed = "       | ";
+//
+//            System.out.println("Here is your table!");
+//            System.out.println();
+//            System.out.println("number | squared | cubed");
+//            System.out.println("------ | ------- | -----");
+//            for (int i = 1; i <= maxNum; i++) {
+//                if (i * i >= 100) {
+//                    System.out.println(i + spacerXs + i * i + spacerXs + i * i * i);
+//                } else if (i * i >= 10) {
+//                    System.out.println(i + spacerSmall + i * i + spacerSmall + i * i * i);
+//                } else {
+//                    System.out.println(i + spacerSmall + i * i + spacerMed + i * i * i);
+//                }
+//            }
+//
+//            System.out.println("Would you like to continue? y or n\n");
+//
+//            String yesOrNo = userInput.next();
+//
+//            if(yesOrNo.equalsIgnoreCase("N")){
+//                System.out.println("Ok! No more tables for you.");
+//                break;
+//            }
+//
+//        }
+
+//        Convert given number grades into letter grades.
+//
+//                Prompt the user for a numerical grade from 0 to 100.
+//        Display the corresponding letter grade.
+//                Prompt the user to continue.
+//        Assume that the user will enter valid integers for the grades.
+//        The application should only continue if the user agrees to.
+//        Grade Ranges:
+//
+//        A : 100 - 88
+//        B : 87 - 80
+//        C : 79 - 67
+//        D : 66 - 60
+//        F : 59 - 0
+//        Bonus
+//
+//        Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
+
+
         while(true){
-            System.out.println("What number would you like to go up to?\n");
+            System.out.println("Please enter a numerical grade from 0 to 100");
 
-            int maxNum = userInput.nextInt();
-            String spacerXXs = "   | ";
-            String spacerXs = "     | ";
-            String spacerSmall = "      | ";
-            String spacerMed = "       | ";
+            int userGrade = userInput.nextInt();
 
-            System.out.println("Here is your table!");
-            System.out.println();
-            System.out.println("number | squared | cubed");
-            System.out.println("------ | ------- | -----");
-            for (int i = 1; i <= maxNum; i++) {
-                if (i * i >= 100) {
-                    System.out.println(i + spacerXs + i * i + spacerXs + i * i * i);
-                } else if (i * i >= 10) {
-                    System.out.println(i + spacerSmall + i * i + spacerSmall + i * i * i);
-                } else {
-                    System.out.println(i + spacerSmall + i * i + spacerMed + i * i * i);
-                }
+            if(userGrade >= 88 && userGrade <= 100){
+                System.out.println("Your grade is an A.");
+            }else if(userGrade >=80 && userGrade <= 87){
+                System.out.println("Your grade is a B.");
+            }else if(userGrade >=67 && userGrade <= 79){
+                System.out.println("Your grade is a C.");
+            }else if(userGrade >=60 && userGrade <= 66){
+                System.out.println("Your grade is a D.");
+            }else {
+                System.out.println("You have an F.");
             }
-
-            System.out.println("Would you like to continue? y or n\n");
+            System.out.println("Would you like to enter another grade? y or n");
 
             String yesOrNo = userInput.next();
 
-            if(yesOrNo.equalsIgnoreCase("N")){
-                System.out.println("Ok! No more tables for you.");
+            if(yesOrNo.equalsIgnoreCase("n")){
+                System.out.println("Ok. Program ending.");
                 break;
             }
 
         }
+
 
 
 
