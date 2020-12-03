@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import static java.lang.Integer.parseInt;
+import static java.lang.Float.parseFloat;
 
 public class ConsoleExercises {
     public static void main(String[] args){
@@ -21,7 +23,7 @@ public class ConsoleExercises {
 //
 //        System.out.printf("The three words you entered are: %n1.%s %n2.%s %n3.%s", firstWord, secondWord, thirdWord);
 
-//        userInput.useDelimiter("/n");
+//        userInput.useDelimiter("\n");
 
 //        System.out.printf("Please type in a sentence:%n");
 //
@@ -49,25 +51,24 @@ public class ConsoleExercises {
 //        System.out.printf("The perimeter is %f and the area is %f and the volume is %f", perimeter, area, volume);
 
 //        Rewrite to use nextInt method
-        userInput.useDelimiter("/n");
+        userInput.useDelimiter("\n");
 
         System.out.printf("Please enter a length and width and height:%n");
 
 
         int length = userInput.nextInt();
+
         int width = userInput.nextInt();
+
         int height = userInput.nextInt();
 
-        System.out.println(length);
-        System.out.println(width);
-        System.out.println(height);
 
 
-//        int perimeter = length*2 + width*2;
-//        int area = length*width;
-//        int volume = area*height;
+        int perimeter = length*2 + width*2;
+        int area = length*width;
+        int volume = area*height;
 
-        System.out.printf("The perimeter is %d and the area is %d and the volume is %d", length*2 + width*2, length*width, length*height*width);
+        System.out.printf("The perimeter is %d and the area is %d and the volume is %d", perimeter, area, volume);
 
 
     }
