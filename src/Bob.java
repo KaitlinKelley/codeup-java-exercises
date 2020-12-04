@@ -18,7 +18,7 @@ public class Bob {
         do {
             System.out.println("What would you like to say to Bob?");
 
-            String Isay = myInput.nextLine();
+            String Isay = myInput.nextLine().trim();
 
 
             if (Isay.endsWith("?")) {
@@ -27,7 +27,7 @@ public class Bob {
             } else if (Isay.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
                 System.out.println();
-            } else if (Isay.equals("")) {
+            } else if (Isay.isEmpty()) {
                 System.out.println("Fine. Be that way!");
                 System.out.println();
             } else {
@@ -47,7 +47,7 @@ public class Bob {
 
 
 
-
+//nope this one doesn't work at all
 //        while (true) {
 //            System.out.println("What would you like to say to Bob?");
 //
