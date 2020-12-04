@@ -119,14 +119,14 @@ public class StringLecture {
 
 // convert word to pig latin word (assume word doesn't begin with a vowel or end in ay)
 
-        String word1 = "Cat ";
-        String pigLatinWord = word1
-            .trim()  //"Cat"
-            .toLowerCase() //"cat"
-            .substring(1) //"at"
-            .concat(word1.substring(0, 1).toLowerCase()) // "atc"
-            .concat("ay"); //"atcay"
-        System.out.println(pigLatinWord); //"atcay"
+//        String word1 = "Cat ";
+//        String pigLatinWord = word1
+//            .trim()  //"Cat"
+//            .toLowerCase() //"cat"
+//            .substring(1) //"at"
+//            .concat(word1.substring(0, 1).toLowerCase()) // "atc"
+//            .concat("ay"); //"atcay"
+//        System.out.println(pigLatinWord); //"atcay"
 
 
 
