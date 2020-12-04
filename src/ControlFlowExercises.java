@@ -22,7 +22,7 @@ public class ControlFlowExercises {
 //            System.out.print(i + " ");
 //            ++i;
 //        }
-
+//===========================================================
 //        Do While
 //
 //        Create a do-while loop that will count by 2's starting with 0 and ending at 100. Follow each number with a new line.
@@ -50,11 +50,25 @@ public class ControlFlowExercises {
 //        }while(i>=-10);
 
 //        int i = 1;
-//
+////
 //        do{
 //            System.out.println(Math.pow(2,i));
 //            i*=2;
 //        }while(Math.pow(2,i) < 100000);
+
+
+//        Other solution: (better! doesn't have decimals)
+
+//        long i = 2L;
+//
+//        do{
+//            System.out.println(i);
+//            i*=i;
+//        }while(i < 1000000);
+
+
+//        ==================================================================
+//        Refactoring to for loops..........
 
 //        for(int i = 5; i <= 15; i++){
 //            System.out.print(i + " ");
@@ -68,23 +82,25 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-//        for(int i = 1; Math.pow(2,i) < 1000000; i*=2){
-//            System.out.println(Math.pow(2,i));
+//        for(long i = 2L; i < 1000000; i*=i){
+//            System.out.println(i);
 //        }
+//=================================================================
+//        FizzBuzz
 
 //        for(int i = 1; i <= 100; i++){
 //            if(i%3 == 0 && i%5 == 0){
 //                System.out.println("FizzBuzz");
-//            } else if(i%3 == 0){
-//                System.out.println("Fizz");
 //            } else if(i%5 == 0){
 //                System.out.println("Buzz");
+//            } else if(i%3 == 0){
+//                System.out.println("Fizz");
 //            } else {
 //                System.out.println(i);
 //            }
 //        }
 
-
+//==================================================================
 //        Display a table of powers.
 //
 //                Prompt the user to enter an integer.
@@ -99,7 +115,6 @@ public class ControlFlowExercises {
 //            System.out.println("What number would you like to go up to?\n");
 //
 //            int maxNum = userInput.nextInt();
-//            String spacerXXs = "   | ";
 //            String spacerXs = "     | ";
 //            String spacerSmall = "      | ";
 //            String spacerMed = "       | ";
@@ -128,7 +143,8 @@ public class ControlFlowExercises {
 //            }
 //
 //        }
-
+//
+//        ======================================================================
 //        Convert given number grades into letter grades.
 //
 //                Prompt the user for a numerical grade from 0 to 100.
@@ -148,33 +164,33 @@ public class ControlFlowExercises {
 //        Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 
 
-        while(true){
-            System.out.println("Please enter a numerical grade from 0 to 100");
-
-            int userGrade = userInput.nextInt();
-
-
-            if(userGrade >= 88 && userGrade <= 100){
-                System.out.println("Your grade is an A.");
-            }else if(userGrade >=80 && userGrade <= 87){
-                System.out.println("Your grade is a B.");
-            }else if(userGrade >=67 && userGrade <= 79){
-                System.out.println("Your grade is a C.");
-            }else if(userGrade >=60 && userGrade <= 66){
-                System.out.println("Your grade is a D.");
-            }else {
-                System.out.println("You have an F. Work harder.");
-            }
-            System.out.println("Would you like to enter another grade? y or n");
-
-            String yesOrNo = userInput.next();
-
-            if(yesOrNo.equalsIgnoreCase("n")){
-                System.out.println("Ok. Program ending.");
-                break;
-            }
-
-        }
+//        while(true){
+//            System.out.println("Please enter a numerical grade from 0 to 100");
+//
+//            int userGrade = userInput.nextInt();
+//
+//
+//            if(userGrade >= 88 && userGrade <= 100){
+//                System.out.println("Your grade is an A.");
+//            }else if(userGrade >=80 && userGrade <= 87){
+//                System.out.println("Your grade is a B.");
+//            }else if(userGrade >=67 && userGrade <= 79){
+//                System.out.println("Your grade is a C.");
+//            }else if(userGrade >=60 && userGrade <= 66){
+//                System.out.println("Your grade is a D.");
+//            }else {
+//                System.out.println("You have an F. Work harder.");
+//            }
+//            System.out.println("Would you like to enter another grade? y or n");
+//
+//            String yesOrNo = userInput.next();
+//
+//            if(yesOrNo.equalsIgnoreCase("n")){
+//                System.out.println("Ok. Program ending.");
+//                break;
+//            }
+//
+//        }
 
 
 
