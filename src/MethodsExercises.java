@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MethodsExercises {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        addStuff(14,32);
 //        subtractStuff(14,32);
 //        multiplyStuff(14,32);
@@ -14,53 +14,46 @@ public class MethodsExercises {
 //        multiplyWithLoop(7,8);
 //        multiplyWithRecursion(5,3);
 //        getInteger(1, 10);
-        getFactorialLoop();
+//        getFactorialLoop();
+        useInputToFindFactorial();
+
 
     }
 
-    public static void addStuff(int num1, int num2){
+
+    public static void addStuff(int num1, int num2) {
         System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
     }
 
-    public static void subtractStuff(int num1, int num2){
+
+    public static void subtractStuff(int num1, int num2) {
         System.out.println(num1 - num2);
     }
 
-    public static void multiplyStuff(int num1, int num2){
-        System.out.println(num1*num2);
+
+    public static void multiplyStuff(int num1, int num2) {
+        System.out.println(num1 * num2);
     }
 
-    public static void divideStuff(float num1, float num2){
-        System.out.println(num1/num2);
+
+    public static void divideStuff(float num1, float num2) {
+        System.out.println(num1 / num2);
     }
 
-    public static void findRemainder(int num1, int num2){
+
+    public static void findRemainder(int num1, int num2) {
         System.out.println(num1 % num2);
     }
 
-    public static void multiplyWithLoop(int baseNum, int numOfTimes){
+
+    public static void multiplyWithLoop(int baseNum, int numOfTimes) {
         int result = 0;
-        for(int i = 1; i <= numOfTimes; i++){
+        for (int i = 1; i <= numOfTimes; i++) {
             result += baseNum;
         }
         System.out.println(baseNum + "x" + numOfTimes + " = " + result);
     }
 
-//    Doesn't work!!!!
-    public static int multiplyWithRecursion(int baseNum, int numOfTimes){
-        if(baseNum == 0 || numOfTimes == 0){
-            System.out.println("0");
-            return 0;
-        } else {
-            if (numOfTimes == 1){
-                System.out.println(baseNum);
-                return baseNum;
-            } else {
-                System.out.println(baseNum + (multiplyWithRecursion(baseNum, numOfTimes - 1)));
-                return baseNum + (multiplyWithRecursion(baseNum, numOfTimes - 1));
-            }
-        }
-    }
 
 //    Create a method that validates that user input is in a certain range
 //
@@ -78,17 +71,17 @@ public class MethodsExercises {
 //    Hint: recursion might be helpful here!
 
 
-    public static int getInteger(int min, int max){
-        System.out.println("Enter a number between 1 and 10:");
-        Scanner userInput = new Scanner (System.in);
-        int userInt = userInput.nextInt();
-        if (userInt <= 10 && userInt >=1){
-            System.out.println("You entered a valid number. Good job");
-            return userInt;
-        } else {
-            return getInteger(min, max);
-        }
-    }
+//    public static int getInteger(int min, int max){
+//        System.out.println("Enter a number between 1 and 10:");
+//        Scanner userInput = new Scanner (System.in);
+//        int userInt = userInput.nextInt();
+//        if (userInt <= 10 && userInt >=1){
+//            System.out.println("You entered a valid number. Good job");
+//            return userInt;
+//        } else {
+//            return getInteger(min, max);
+//        }
+//    }
 
 //    Calculate the factorial of a number.
 //
@@ -112,36 +105,70 @@ public class MethodsExercises {
 //    Test the application and find the integer for the highest factorial that can be accurately calculated by this application, then modify the prompt so that it prompts the user for a number "from 1 to {the highest integer that returns accurate factorial calculation}". Don’t forget to change your verification too!
 //    Use recursion to implement the factorial.
 
-    public static void getFactorialLoop(){
-            boolean stillWantsToPlay = true;
+//    public static void getFactorialLoop(){
+//            boolean stillWantsToPlay = true;
+//        do {
+//            System.out.println("Please enter an integer between 1 and 20:");
+//            Scanner userInput = new Scanner(System.in);
+//            int userInt = userInput.nextInt();
+//            if (userInt > 20 || userInt < 1) {
+//                System.out.println("Invalid input.");
+//            } else {
+//                long factorialResult = 1;
+//                for (int i = 1; i <= userInt; i++) {
+//                    factorialResult *= i;
+//                }
+//                System.out.println("Your factorial is: " + factorialResult);
+//                System.out.println("Would you like to try again? [y/n]");
+//                String yesOrNo = userInput.next();
+//                if (yesOrNo.equalsIgnoreCase("n")) {
+//                    System.out.println("Ok. Ending program.");
+//                    stillWantsToPlay = false;
+//                }
+//            }
+//        }while(stillWantsToPlay);
+
+
+    //    Recursion factorial stuff===========================
+
+    public static void useInputToFindFactorial(){
+        int userInt;
+        boolean stillWantsToPlay = true;
         do {
-            System.out.println("Please enter an integer between 1 and 10:");
+            System.out.println("Please enter an integer between 1 and 20:");
             Scanner userInput = new Scanner(System.in);
-            int userInt = userInput.nextInt();
-            if (userInt > 10 || userInt < 1) {
+            userInt = userInput.nextInt();
+            if (userInt < 1 || userInt > 20) {
                 System.out.println("Invalid input.");
             } else {
-                long factorialResult = 1;
-                for (int i = 1; i <= userInt; i++) {
-                    factorialResult *= i;
-                }
-                System.out.println("Your factorial is: " + factorialResult);
-                System.out.println("Would you like to try again? [y/n]");
+                long factorialResult = calculateFactorialRecursion(userInt);
+                System.out.println("Your result is: " + factorialResult);
+                System.out.println("Would you like to continue? [y/n]");
                 String yesOrNo = userInput.next();
                 if (yesOrNo.equalsIgnoreCase("n")) {
                     System.out.println("Ok. Ending program.");
                     stillWantsToPlay = false;
                 }
+
             }
-        }while(stillWantsToPlay);
+        } while (stillWantsToPlay);
+    }
 
-//    public static int getFactorialRecurs(int someInt){
-//        System.out.println("Please enter an integer between 1 and 10:");
-//        Scanner userInput = new Scanner (System.in);
-//        int userInt = userInput.nextInt();
-//    }
+    public static long calculateFactorialRecursion(int userInt) {
+        if (userInt >= 1) {
+            return userInt * calculateFactorialRecursion(userInt - 1);
+        } else {
+            return 1;
+        }
 
 
+    }
+//        ==========================================================================
+
+
+
+
+//    Leave this curly brace alone!!!!
 }
 
-}
+
