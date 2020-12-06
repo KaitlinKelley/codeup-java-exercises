@@ -91,11 +91,11 @@ public class StringLecture {
 //        System.out.println(firstName);
 //        System.out.println(lastName);
 
-//        String name = "Justin Reich";
-//        String firstName = name.substring(0, name.indexOf(" "));
-//        System.out.println(firstName);
-//        String lastName = name.substring(firstName.length() + 1);
-//        System.out.println(lastName);
+        String name = "Justin Reich";
+        String firstName = name.substring(0, name.indexOf(" "));
+        System.out.println(firstName);
+        String lastName = name.substring(firstName.length() + 1);
+        System.out.println(lastName);
 
 
 // ------ .toLowerCase() and .toUpperCase()

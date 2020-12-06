@@ -15,16 +15,17 @@ public class MethodLecture {
 
 //    Hoisting does not exit in Java!
 
-    public static void sayJupiter(){
-        System.out.println("Jupiter");
-    };
+//    public static void sayJupiter(){
+//        System.out.println("Jupiter");
+//    };
 
     //Since we're just printing with these, the return type can be void
-    public static void printCohortName(String name){
-        System.out.println(name);
-    }
+//    public static void printCohortName(String name){
+//        System.out.println(name);
+//    }
 
     public static void main(String[] args) {
+//        soutHello(1);
 //        sayJupiter();
 //        printCohortName("Luna");
 //        printCohortName("Europa");
@@ -87,50 +88,68 @@ public class MethodLecture {
 
     // ----------- OVERLOADING
 
-    //    public static void sayHello(int times) {
-    //        for (int i = 0; i < times; i += 1) {
-    //            sayHello();
-    //        }
-    //    }
-    //    public static void sayHello() {
-    //        sayHello("Hello", "World");
-    //    }
-    //    public static void sayHello(String name) {
-    //        sayHello("Hello", name);
-    //    }
-    //    public static void sayHello(String greeting, String name) {
-    //        System.out.println(greeting + ", " + name + "!");
-    //    }
-    //
-    //    public static double sayHello(double x) {
-    //        return x;
-    //    }
+
+
+//        public static void sayHello(int times) {
+//            for (int i = 0; i < times; i += 1) {
+//                sayHello();
+//            }
+//        }
+//        public static void sayHello() {
+//            sayHello("Hello", "World");
+//        }
+//        public static void sayHello(String name) {
+//            sayHello("Hello", name);
+//        }
+//        public static void sayHello(String greeting, String name) {
+//            System.out.println(greeting + ", " + name + "!");
+//        }
+//
+//        public static double sayHello(double x) {
+//            return x;
+//        }
 
     // ----------- RECURSION
 
-    //    public static void countTo100Loop(int num) {
-    //        for (int i = num; i <= 100; i += 1) {
-    //            System.out.println(i);
-    //        }
-    //    }
-    //
-    //    public static int countTo100(int num) {
-    //        System.out.println(num);
-    //        return num == 100 ? num : countTo100(++num);
-    //    }
-    //
-    //    public static int powerOf10(int n) {
-    //        if (n == 0) {
-    //            return 1;
-    //        }
-    //        return powerOf10(n-1) * 10;
-    //    }
-    //
-    //    public static int fibonacci(int n) {
-    //        if (n <= 1) {
-    //            return n;
-    //        }
-    //        return fibonacci(n-1) + fibonacci(n-2);
-    //    }
+//        This will cause a stack overflow!!! Bad!!
+        public static void soutHello(){
+            System.out.println("hello");
+            soutHello();
+        }
+
+//        This is better. No errors, has a stopping point.
+        public static void soutHello(int num){
+            if(num > 10){
+                return;
+            }
+            System.out.println("Hello");
+            soutHello(num + 1);
+        }
+
+
+        public static void countTo100Loop(int num) {
+            for (int i = num; i <= 100; i += 1) {
+                System.out.println(i);
+            }
+        }
+
+        public static int countTo100(int num) {
+            System.out.println(num);
+            return num == 100 ? num : countTo100(++num);
+        }
+
+        public static int powerOf10(int n) {
+            if (n == 0) {
+                return 1;
+            }
+            return powerOf10(n-1) * 10;
+        }
+
+        public static int fibonacci(int n) {
+            if (n <= 1) {
+                return n;
+            }
+            return fibonacci(n-1) + fibonacci(n-2);
+        }
 
 }
