@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class MethodsExercises {
 
@@ -15,7 +16,8 @@ public class MethodsExercises {
 //        multiplyWithRecursion(5,3);
 //        getInteger(1, 10);
 //        getFactorialLoop();
-        useInputToFindFactorial();
+//        useInputToFindFactorial();
+        rollTheDice();
 
 
     }
@@ -164,6 +166,47 @@ public class MethodsExercises {
 
     }
 //        ==========================================================================
+
+//    Create an application that simulates dice rolling.
+//
+//    Ask the user to enter the number of sides for a pair of dice.
+//    Prompt the user to roll the dice.
+//"Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+//            Use static methods to implement the method(s) that generate the random numbers.
+//    Use the .random method of the java.lang.Math class to generate random numbers.
+
+
+public static int generateRandom(int numOfSides){
+    double randomNum = Math.floor(Math.random() * numOfSides) + 2;
+    int randomInt = (int)randomNum;
+    return randomInt;
+}
+
+public static void rollTheDice(){
+        boolean stillPlaying = true;
+    do {
+        System.out.println("Let's roll the dice!");
+        System.out.println("How many sides does each die have? Enter two integers, each greater than or equal to 2:");
+        Scanner userInput = new Scanner(System.in);
+        int numOfSides1 = userInput.nextInt();
+        int numOfSides2 = userInput.nextInt();
+        int firstRoll = generateRandom(numOfSides1);
+        int secondRoll = generateRandom(numOfSides2);
+        if(firstRoll == 20 || secondRoll == 20){
+            System.out.printf("You rolled a(n) %d and a(n) %d. You got a nat 20!%n", firstRoll, secondRoll);
+        } else {
+            System.out.printf("You rolled a(n) %d and a(n) %d.%n", firstRoll, secondRoll);
+        }
+        System.out.println("Would you like to roll again? [y/n]");
+        String yesOrNo = userInput.next();
+        if(yesOrNo.equalsIgnoreCase("n")){
+            System.out.println("Ok! Game over.");
+            stillPlaying = false;
+        }
+    }while(stillPlaying);
+}
+
+
 
 
 
