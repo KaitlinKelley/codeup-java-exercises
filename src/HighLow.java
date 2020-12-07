@@ -24,6 +24,9 @@ public class HighLow {
 //    Keep track of how many guesses a user makes.
 //    Set an upper limit on the number of guesses.
 
+//    =========================================================================
+
+
     public static void main(String[] args){
         guessingGame();
     }
@@ -62,7 +65,7 @@ public class HighLow {
                 }else if(userGuess > randomInt){
                     System.out.println("Too high! Try again.");
                     numOfGuesses++;
-                }else if(userGuess < randomInt){
+                }else {
                     System.out.println("Too low! Try again.");
                     numOfGuesses++;
                 }
