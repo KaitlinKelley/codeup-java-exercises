@@ -13,13 +13,11 @@ public class MethodsExercises {
 //        //Dividing by infinity in Java can throw an exception, or result in infinity, depending on whether we are using an int or a float, etc.
 //        multiplyWithLoop(5,3);
 //        multiplyWithLoop(7,8);
-//        multiplyWithRecursion(5,3);
+        System.out.println(multiplyWithRecursion(5,3));
 //        getInteger(1, 10);
 //        getFactorialLoop();
 //        useInputToFindFactorial();
-        rollTheDice();
-
-
+//        rollTheDice();
     }
 
 
@@ -54,6 +52,15 @@ public class MethodsExercises {
             result += baseNum;
         }
         System.out.println(baseNum + "x" + numOfTimes + " = " + result);
+    }
+
+
+    public static int multiplyWithRecursion(int baseNum, int numOfTimes) {
+        if (numOfTimes <= 0) {
+            return 0;
+        } else {
+            return multiplyWithRecursion(baseNum, numOfTimes - 1);
+        }
     }
 
 
@@ -131,40 +138,40 @@ public class MethodsExercises {
 //        }while(stillWantsToPlay);
 
 
-    //    Recursion factorial stuff===========================
+        //    Recursion factorial stuff===========================
 
-    public static void useInputToFindFactorial(){
-        int userInt;
-        boolean stillWantsToPlay = true;
-        do {
-            System.out.println("Please enter an integer between 1 and 20:");
-            Scanner userInput = new Scanner(System.in);
-            userInt = userInput.nextInt();
-            if (userInt < 1 || userInt > 20) {
-                System.out.println("Invalid input.");
-            } else {
-                long factorialResult = calculateFactorialRecursion(userInt);
-                System.out.println("Your result is: " + factorialResult);
-                System.out.println("Would you like to continue? [y/n]");
-                String yesOrNo = userInput.next();
-                if (yesOrNo.equalsIgnoreCase("n")) {
-                    System.out.println("Ok. Ending program.");
-                    stillWantsToPlay = false;
-                }
+//    public static void useInputToFindFactorial(){
+//        int userInt;
+//        boolean stillWantsToPlay = true;
+//        do {
+//            System.out.println("Please enter an integer between 1 and 20:");
+//            Scanner userInput = new Scanner(System.in);
+//            userInt = userInput.nextInt();
+//            if (userInt < 1 || userInt > 20) {
+//                System.out.println("Invalid input.");
+//            } else {
+//                long factorialResult = calculateFactorialRecursion(userInt);
+//                System.out.println("Your result is: " + factorialResult);
+//                System.out.println("Would you like to continue? [y/n]");
+//                String yesOrNo = userInput.next();
+//                if (yesOrNo.equalsIgnoreCase("n")) {
+//                    System.out.println("Ok. Ending program.");
+//                    stillWantsToPlay = false;
+//                }
+//
+//            }
+//        } while (stillWantsToPlay);
+//    }
 
-            }
-        } while (stillWantsToPlay);
-    }
-
-    public static long calculateFactorialRecursion(int userInt) {
-        if (userInt >= 1) {
-            return userInt * calculateFactorialRecursion(userInt - 1);
-        } else {
-            return 1;
-        }
-
-
-    }
+//    public static long calculateFactorialRecursion(int userInt) {
+//        if (userInt >= 1) {
+//            return userInt * calculateFactorialRecursion(userInt - 1);
+//        } else {
+//            return 1;
+//        }
+//
+//
+//    }
 //        ==========================================================================
 
 //    Create an application that simulates dice rolling.
@@ -176,38 +183,35 @@ public class MethodsExercises {
 //    Use the .random method of the java.lang.Math class to generate random numbers.
 
 
-public static int generateRandom(int numOfSides){
-    double randomNum = Math.floor(Math.random() * numOfSides) + 2;
-    int randomInt = (int)randomNum;
-    return randomInt;
-}
+//    public static int generateRandom(int numOfSides){
+//        double randomNum = Math.floor(Math.random() * numOfSides) + 2;
+//        int randomInt = (int)randomNum;
+//        return randomInt;
+//    }
 
-public static void rollTheDice(){
-        boolean stillPlaying = true;
-    do {
-        System.out.println("Let's roll the dice!");
-        System.out.println("How many sides does each die have? Enter two integers, each greater than or equal to 2:");
-        Scanner userInput = new Scanner(System.in);
-        int numOfSides1 = userInput.nextInt();
-        int numOfSides2 = userInput.nextInt();
-        int firstRoll = generateRandom(numOfSides1);
-        int secondRoll = generateRandom(numOfSides2);
-        if(firstRoll == 20 || secondRoll == 20){
-            System.out.printf("You rolled a(n) %d and a(n) %d. You got a nat 20!%n", firstRoll, secondRoll);
-        } else {
-            System.out.printf("You rolled a(n) %d and a(n) %d.%n", firstRoll, secondRoll);
-        }
-        System.out.println("Would you like to roll again? [y/n]");
-        String yesOrNo = userInput.next();
-        if(yesOrNo.equalsIgnoreCase("n")){
-            System.out.println("Ok! Game over.");
-            stillPlaying = false;
-        }
-    }while(stillPlaying);
-}
-
-
-
+//    public static void rollTheDice(){
+//            boolean stillPlaying = true;
+//        do {
+//            System.out.println("Let's roll the dice!");
+//            System.out.println("How many sides does each die have? Enter two integers, each greater than or equal to 2:");
+//            Scanner userInput = new Scanner(System.in);
+//            int numOfSides1 = userInput.nextInt();
+//            int numOfSides2 = userInput.nextInt();
+//            int firstRoll = generateRandom(numOfSides1);
+//            int secondRoll = generateRandom(numOfSides2);
+//            if(firstRoll == 20 || secondRoll == 20){
+//                System.out.printf("You rolled a(n) %d and a(n) %d. You got a nat 20!%n", firstRoll, secondRoll);
+//            } else {
+//                System.out.printf("You rolled a(n) %d and a(n) %d.%n", firstRoll, secondRoll);
+//            }
+//            System.out.println("Would you like to roll again? [y/n]");
+//            String yesOrNo = userInput.next();
+//            if(yesOrNo.equalsIgnoreCase("n")){
+//                System.out.println("Ok! Game over.");
+//                stillPlaying = false;
+//            }
+//        }while(stillPlaying);
+//    }
 
 
 
