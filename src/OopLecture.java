@@ -83,7 +83,17 @@ public class OopLecture {
 
         // -- DogHelper Example --
 
-
+//        Dog dog = new Dog();
+//        dog.name = "Sparky";
+//        dog.age = 3;
+//        dog.callForDog("Sparky");//Sparky is now walking toward you!
+//        dog.callForDog(dog.name);//Sparky is now walking toward you!
+//        dog.callForDog("Rover");//Sparky ignores you.
+//
+//        System.out.println(DogHelper.NUMBER_OF_DOG_BREEDS);
+//
+//        //Sparky's Age in Dog Years
+//        System.out.println(DogHelper.humanToDogYears(dog.age));
 
 
         // ======================== slide 7 (class vs. object fields)
@@ -103,11 +113,21 @@ public class OopLecture {
         // ======================== slide 8 (constructors)
 
 //            Student jane = new Student("Jane Doe", "Zion");
+//            Student kaitlin = new Student("Kaitlin Muse", "Jupiter");
 //            System.out.print(jane.name + " - ");
 //            System.out.println(jane.cohort); // prints "Jane Doe - Zion"
 //            Student john = new Student("John Doe");
 //            System.out.println(john.name + " - ");
 //            System.out.println(john.cohort); // prints "John Doe - Unassigned"
+//
+//            System.out.print(kaitlin.name + " - ");
+//            System.out.println(kaitlin.cohort);
+
+//            Student s1 = new Student();
+//            Student s2 = new Student();
+//
+//            s1.testMethod();
+//            s2.testMethod();
 
 
         // ======================== slide 9 (this keyword)
@@ -121,12 +141,25 @@ public class OopLecture {
 
 
         // ======================== slide 10 (visibility)
-
+//
 //            Student student = new Student("John Doe", 82.4);
-//            System.out.println(student.name) // "John Doe"
-//            // DON'T DO THIS - can't access private properties outside the class
+//            System.out.println(student.name); // "John Doe"
+//            student.name = "Robert Smith";
+//            System.out.println(student.name);
+
+            // DON'T DO THIS - can't access private properties outside the class
+        //Won't even compile!
 //            System.out.println(student.grade);
+
 //            System.out.println(student.shareGrade()); // Do this instead
+
+        //In this situation, the grade canNOT be changed from the OopLecture class
+
+
+
+
+//        student.changeGrade(70);
+//        System.out.println(student.shareGrade());
 
 
     }

@@ -18,6 +18,6 @@ public class Dish {
     public String origin;
 
     public void printSummary(){
-        System.out.printf("Name: %s%nCost: %d%nRecommended: %b%nVegetarian? %b%nCourseType: %s%nArea(s) of Origin: %s%n%n", nameOfDish, costInCents, wouldRecommend, vegetarian, courseType, origin);
+        System.out.printf("Name: %s%nCost: %d%nRecommended: %b%nVegetarian? %b%nCourse Type: %s%nArea(s) of Origin: %s%n%n", nameOfDish, costInCents, wouldRecommend, vegetarian, courseType, origin);
     }
 }
