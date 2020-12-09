@@ -7,22 +7,29 @@ public class DishTools {
 //  - flipRecommendation() - that takes in a Dish object and reverses the wouldRecommend boolean value
 //    Try out the DishTools methods with Dish objects in the DishTest main method
 
-    final int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
+    public static final int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
 
     public static void shoutDishName(Dish dish){
         System.out.println(dish.nameOfDish.toUpperCase() + "!!!!!!!");
     }
 
     public static void analyzeDishCost(Dish dish){
-
+        if(dish.costInCents > AVERAGE_COST_OF_DISH_IN_CENTS){
+            System.out.println("Cost is greater than average.");
+        } else if (dish.costInCents < AVERAGE_COST_OF_DISH_IN_CENTS){
+            System.out.println("Cost is less than average.");
+        } else {
+            System.out.println("Cost is average.");
+        }
     }
 
-    public static void flipRecommendation(Dish dish){
-        if(dish.wouldRecommend = true){
+    public static boolean flipRecommendation(Dish dish){
+        if(dish.wouldRecommend){
             dish.wouldRecommend = false;
-        } else {
+        } else if(!dish.wouldRecommend) {
             dish.wouldRecommend = true;
         }
+        return dish.wouldRecommend;
     }
 
 }

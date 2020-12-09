@@ -63,12 +63,24 @@ public class DishTest {
         cobbSalad.courseType = "Appetizer";
         cobbSalad.origin = "United States";
 
-        shakshuka.printSummary();
-        bananasFoster.printSummary();
-        maqluba.printSummary();
-        chickenMarsala.printSummary();
-        doroWat.printSummary();
-        lambBiryani.printSummary();
+//        shakshuka.printSummary();
+//        bananasFoster.printSummary();
+//        maqluba.printSummary();
+//        chickenMarsala.printSummary();
+//        doroWat.printSummary();
+//        lambBiryani.printSummary();
+//        cobbSalad.printSummary();
+
+//        DishTools.shoutDishName(shakshuka);
+//        DishTools.shoutDishName(cobbSalad);
+//
+//        DishTools.analyzeDishCost(maqluba);
+//        DishTools.analyzeDishCost(chickenMarsala);
+
+        System.out.println(DishTools.flipRecommendation(cobbSalad));
+        System.out.println(DishTools.flipRecommendation(chickenMarsala));
+
         cobbSalad.printSummary();
+        chickenMarsala.printSummary();
     }
 }
