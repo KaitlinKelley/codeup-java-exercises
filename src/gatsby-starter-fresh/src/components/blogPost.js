@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Default from "../components/default"
-import Post from "../components/post"
+import oopLecture.Post from "../components/post"
 import SEO from "../components/seo"
 import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import useSiteMetadata from '../utils/site-metadata';
@@ -27,14 +27,14 @@ const BlogPost = ({ path, data }) => {
       keywords={markdownRemark.frontmatter.keywords}
     />
     <Default></Default>
-    <Post 
+    <oopLecture.Post
       title={markdownRemark.frontmatter.title} 
       date={markdownRemark.frontmatter.date} >
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
 
       <CommentCount config={disqusConfig} placeholder={'...'} />
       <Disqus config={disqusConfig} />
-    </Post>
+    </oopLecture.Post>
     </>
   )
 }

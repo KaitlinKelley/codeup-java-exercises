@@ -1,3 +1,5 @@
+package oopLecture;
+
 public class Student {
 
     // ======================== slide 8 (constructors)
@@ -9,18 +11,18 @@ public class Student {
 //            System.out.println("Will this run?");
 //        }
 //
-//        public Student(){
-//            System.out.println("New Student created. Please add info.");
+//        public oopLecture.Student(){
+//            System.out.println("New oopLecture.Student created. Please add info.");
 //            testMethod();
 //        }
 //
-//        public Student(String studentName) {
-//            this(); //Calls the Student() method, and then therefore the testMethod()
+//        public oopLecture.Student(String studentName) {
+//            this(); //Calls the oopLecture.Student() method, and then therefore the testMethod()
 //            name = studentName;
 //            cohort = "Unassigned";
 //        }
 //
-//        public Student(String studentName, String assignedCohort) {
+//        public oopLecture.Student(String studentName, String assignedCohort) {
 //            name = studentName;
 //            cohort = assignedCohort;
 //        }
@@ -31,11 +33,11 @@ public class Student {
 //        public String name;
 //        public String cohort;
 //
-//        public Student(String name) {
+//        public oopLecture.Student(String name) {
 //            this(name, "Unassigned");
 //        }
 //
-//        public Student(String name, String cohort) {
+//        public oopLecture.Student(String name, String cohort) {
 //            this.name = name;
 //            this.cohort = cohort;
 //        }

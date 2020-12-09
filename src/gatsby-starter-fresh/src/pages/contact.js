@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import Default from "../components/default"
-import Post from "../components/post"
+import oopLecture.Post from "../components/post"
 import { useStaticQuery, graphql } from "gatsby"
 
 
@@ -24,7 +24,7 @@ const ContactPage = () => {
 	<>
 	<SEO title="Contact" />
   	<Default/>
-  	<Post title="Get in touch 📝">
+  	<oopLecture.Post title="Get in touch 📝">
   		<p>
        Get in touch through the contact form below or through any social media
   		</p>
@@ -45,7 +45,7 @@ const ContactPage = () => {
 		    	<button type="submit" value="Send" className="form-btn">Send</button>
 		  	</div>
 		</form>
-    </Post>
+    </oopLecture.Post>
   	</>
   )
 }

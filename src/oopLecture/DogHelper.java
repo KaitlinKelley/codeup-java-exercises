@@ -1,3 +1,5 @@
+package oopLecture;
+
 public class DogHelper {
 
     public static final int NUMBER_OF_DOG_BREEDS = 340;

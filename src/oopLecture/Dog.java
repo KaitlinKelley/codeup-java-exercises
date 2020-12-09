@@ -1,3 +1,5 @@
+package oopLecture;
+
 public class Dog {
 
     // relating to slide 3

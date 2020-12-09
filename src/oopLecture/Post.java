@@ -1,3 +1,5 @@
+package oopLecture;
+
 import java.util.Date;
 
 public class Post {

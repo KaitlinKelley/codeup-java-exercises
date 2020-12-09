@@ -1,80 +1,59 @@
 public class Person {
 
-//        // SLIDE 3
-//        public String firstName;
-//        public String lastName;
+    private String name;
 
-//        public String lastName = "Smith"; //this would give us a default last name, if not specified otherwise
+    public String getName(){
+        return this.name;
+    }
 
+    public void setName(String name){
+        this.name = name;
+    }
 
+    public void sayHello(){
+        System.out.println("Hello from " + this.name + "!");
+    }
 
-    // SLIDE 4
+    public Person(String name){
+        this.name = name;
+    }
 
-//        // instance variables
-        //Note the absence of the static keyword!
-        public String firstName;
-        public String lastName;
+    public static void main(String [] args){
+        //Object Basics
+//        Person p1 = new Person("Bob");
 //
-//        // instance method
-//        public String sayHello() {
-//                return lastName + ", " + firstName + " says hi!";
-//        }
-
-
-        //can put in a parameter if you want
-//        public String sayHello(char punctuation) {
-//                return lastName + ", " + firstName + " says hi!" + punctuation;
-//        }
-
-
-    // SLIDE 7
-        public static long worldPopulation = 7_500_000_000L; // class property, not a constant, so can be changed
-        public String name;                                  // instance property
-
-        public void sayName(){
-                if (name.length() > 5){
-                        System.out.println("My long name is: " + name);
-                }else {
-                System.out.println("My name is: " + name);
-
-                }
-        }
-
-        public static String findLongestName(Person p1, Person p2){
-                if (p1.name.length() > p2.name.length()){
-                        return p1.name;
-                } else {
-                        return p2.name;
-                }
-        }
-
-        public static void main(String[] args) {
-
-//                System.out.println(Person.worldPopulation);
-//                Person.worldPopulation -= 1;
-//                System.out.println(worldPopulation);
+//        System.out.println(p1.name); //Bob
+//        p1.sayHello(); //Hello from Bob!
 //
+//        p1.setName("Robert");
+//        System.out.println(p1.name); //Robert
+//        p1.sayHello(); //Hello from Robert!
 //
-                Person theBestDrummerAlive = new Person();//instantiate a new person object
-                theBestDrummerAlive.name = "Neil Peart";//assign value to name property
-                Person.worldPopulation += 1; // accessing a static property
+//        p1.setName("James");
+//        System.out.println(p1.getName()); //James
+//        p1.sayHello(); //Hello from James!
+        //=================================================
 
-                theBestDrummerAlive.sayName();
-
-                Person notADrummer = new Person();
-                notADrummer.name = "Justin";
-
-                String longestName = Person.findLongestName(theBestDrummerAlive, notADrummer);
-                System.out.println(longestName);
+        //Understanding References
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName())); //true
+//        System.out.println(person1 == person2); //false
 
 
-//                // this also works, but is usually not a good idea:
-                //accessing static methods and variables through object instead of through the class
-//                System.out.println(theBestDrummerAlive.worldPopulation); // 7500000001
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2); //true
 
-//                // DONT DO THIS, it will not compile
-                //trying to access an instance variable method in a static way
-////                 System.out.println(Person.name);  //name is an instance variable
-        }
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName()); //John
+        System.out.println(person2.getName()); //John
+        person2.setName("Jane");
+        System.out.println(person1.getName()); //Jane (not sure why???)
+        System.out.println(person2.getName()); //Jane
+
+    }
+
 
 }
