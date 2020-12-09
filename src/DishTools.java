@@ -10,26 +10,26 @@ public class DishTools {
     public static final int AVERAGE_COST_OF_DISH_IN_CENTS = 1300;
 
     public static void shoutDishName(Dish dish){
-        System.out.println(dish.nameOfDish.toUpperCase() + "!!!!!!!");
+        System.out.println(dish.getNameOfDish().toUpperCase() + "!!!!!!!");
     }
-
+//
     public static void analyzeDishCost(Dish dish){
-        if(dish.costInCents > AVERAGE_COST_OF_DISH_IN_CENTS){
+        if(dish.getCostInCents() > AVERAGE_COST_OF_DISH_IN_CENTS){
             System.out.println("Cost is greater than average.");
-        } else if (dish.costInCents < AVERAGE_COST_OF_DISH_IN_CENTS){
+        } else if (dish.getCostInCents() < AVERAGE_COST_OF_DISH_IN_CENTS){
             System.out.println("Cost is less than average.");
         } else {
             System.out.println("Cost is average.");
         }
     }
-
+//
     public static boolean flipRecommendation(Dish dish){
-        if(dish.wouldRecommend){
-            dish.wouldRecommend = false;
-        } else if(!dish.wouldRecommend) {
-            dish.wouldRecommend = true;
+        if(dish.getWouldRecommend()){
+            dish.setWouldRecommend(false);
+        } else if(!dish.getWouldRecommend()) {
+            dish.setWouldRecommend(true);
         }
-        return dish.wouldRecommend;
+        return dish.getWouldRecommend();
     }
 
 }
