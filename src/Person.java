@@ -47,13 +47,13 @@ public class Person {
 //        Person person2 = person1;
 //        System.out.println(person1 == person2); //true, person2 is now just another way to refer to person1
 
-        Person person1 = new Person("John");
-        Person person2 = person1;
-        System.out.println(person1.getName()); //John
-        System.out.println(person2.getName()); //John
-        person2.setName("Jane");
-        System.out.println(person1.getName()); //Jane, person1 and person2 are still referring to the same person object
-        System.out.println(person2.getName()); //Jane
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1.getName()); //John
+//        System.out.println(person2.getName()); //John
+//        person2.setName("Jane");
+//        System.out.println(person1.getName()); //Jane, person1 and person2 are still referring to the same person object
+//        System.out.println(person2.getName()); //Jane
 
     }
 

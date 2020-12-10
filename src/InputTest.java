@@ -1,13 +1,11 @@
 import util.Input;
 
-import java.util.Scanner;
-
 public class InputTest {
 
     public static void main(String[] args){
         Input userInput = new Input();
 
-//        userInput.yesNo();
+//        System.out.println(userInput.yesNo());
 
 
 //        userInput.getString();
@@ -17,7 +15,8 @@ public class InputTest {
 
 //        userInput.getInt();
 //
-//        userInput.getDouble(1.00, 50.00);
+//        System.out.println(userInput.getDouble(1.00, 50.00));
+
 //
 //        userInput.getDouble();
 
