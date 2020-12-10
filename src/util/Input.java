@@ -12,15 +12,28 @@ public class Input {
     }
 
     public String getString(){
-        System.out.println("Please enter a string:");
         String userString = this.scanner.nextLine();
         return userString;
     }
 
-//    public boolean yesNo(){
-//
-//    }
-//
+    public String getString(String prompt){
+        System.out.println(prompt);
+        String userString = this.scanner.nextLine();
+        return userString;
+    }
+
+    public boolean yesNo(){
+        System.out.println("Please enter either yes or no:");
+        String userYesOrNo = this.scanner.nextLine();
+        if(userYesOrNo.equalsIgnoreCase("yes") || userYesOrNo.equalsIgnoreCase("y")){
+//            System.out.println("Thank you. This boolean is now true.");
+            return true;
+        }else{
+//            System.out.println("Thank you. This boolean is now false.");
+            return false;
+        }
+    }
+
     public int getInt(int min, int max){
         System.out.printf("Please enter an integer between %d and %d:%n", min, max);
         int userInt = this.scanner.nextInt();
@@ -34,11 +47,12 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Please enter an integer:");
+//        System.out.println("Please enter an integer:");
         int userInt = this.scanner.nextInt();
         return userInt;
     }
-//
+
+
     public double getDouble(double min, double max){
         System.out.printf("Please enter a decimal value between %f and %f:%n", min, max);
         double userDouble = this.scanner.nextDouble();
@@ -51,8 +65,9 @@ public class Input {
         return userDouble;
     }
 
+
     public double getDouble(){
-        System.out.println("Please enter a decimal value:");
+        System.out.println("Please enter a value of type double:");
         double userDouble = this.scanner.nextDouble();
         return userDouble;
     }
