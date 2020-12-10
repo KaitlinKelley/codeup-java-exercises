@@ -39,7 +39,7 @@ public class Input {
 
     public boolean yesNo(String prompt){
         System.out.println(prompt);
-        String userYesOrNo = this.sc.nextLine().trim();
+        String userYesOrNo = this.sc.next().trim();
         //can also reuse getString() here
         if(userYesOrNo.equalsIgnoreCase("yes") || userYesOrNo.equalsIgnoreCase("y")){
 //            System.out.println("Thank you. This boolean is now true.");

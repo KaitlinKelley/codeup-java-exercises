@@ -8,9 +8,9 @@ public class CircleApp {
 
         Input userInput = new Input();
 
-//        boolean wantsToContinue = true;
+        boolean wantsToContinue = true;
 
-//        do {
+        do {
             System.out.println("Let's make a circle! We need a radius.");
 
             double userRadius = userInput.getDouble();
@@ -20,17 +20,14 @@ public class CircleApp {
             System.out.println("You made a circle!");
 
             System.out.printf("The radius is: %f%n", userRadius);
-            System.out.printf("The area is: %f%n", Circle.getArea(userRadius));
-            System.out.printf("The circumference is: %f%n", Circle.getCircumference(userRadius));
+            System.out.printf("The area is: %f%n", c1.getArea());
+            System.out.printf("The circumference is: %f%n", c1.getCircumference());
             System.out.println(".....I have no idea what the units are. Sorry.");
+            System.out.printf("You have made %d circle(s)", Circle.getCircleCount());
             System.out.println();
-//            System.out.println("Would you like to make another circle?");
-//            boolean userYesNo = userInput.yesNo();
-//            if (!userYesNo){
-//                wantsToContinue = false;
-//            }
-//
-//        }while(wantsToContinue);
+            wantsToContinue = userInput.yesNo("Would you like to make another circle?");
+
+        }while(wantsToContinue);
 
 
     }
