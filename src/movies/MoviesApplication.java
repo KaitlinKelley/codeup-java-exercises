@@ -2,7 +2,7 @@ package movies;
 
 import util.Input;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class MoviesApplication {
 
@@ -48,6 +48,14 @@ public class MoviesApplication {
                     System.out.println("------------------------");
                     showAllSciFi();
 //                    getConfirmation(userInput);
+                }else if(userChoice == 6){
+                    Movie[] movieArray = MoviesArray.findAll();
+                    System.out.println("Please enter a movie title:");
+                    String userTitle = userInput.getString();
+                    System.out.println("Please enter a category:");
+                    String userCategory = userInput.getString().toLowerCase().trim();
+                    Movie movieToAdd = new Movie(userTitle, userCategory);
+                    addMovie(movieArray, movieToAdd);
                 }
 
             }
@@ -73,6 +81,7 @@ public class MoviesApplication {
         System.out.println("3 - view movies in the drama category");
         System.out.println("4 - view movies in the horror category");
         System.out.println("5 - view movies in the sci-fi category");
+        System.out.println("6 - add a movie");
         System.out.println();
         System.out.println("Please enter your choice:");
     }
@@ -138,6 +147,14 @@ public class MoviesApplication {
 //            stillUsingApp = false;
 //        }
 //    }
+
+    public static Movie[] addMovie(Movie[] array, Movie movie){
+        Movie[] updatedMovieArray = Arrays.copyOf(array, array.length + 1);
+        updatedMovieArray[array.length] = movie;
+        return updatedMovieArray;
+    }
+
+
 
 
 
