@@ -44,10 +44,10 @@ public class OopLecture {
 
 
 
-        // -- oopLecture.Dog Example --
+        // -- oopLecture.animalBonus.Dog Example --
 
 
-//            oopLecture.Dog d1 = new oopLecture.Dog();
+//            oopLecture.animalBonus.Dog d1 = new oopLecture.animalBonus.Dog();
 //
 //            d1.age = 3;
 //            d1.breed = "corgi";
@@ -65,9 +65,9 @@ public class OopLecture {
 //            System.out.println(rick.sayHello('!'));//invoking the method with parameter
         //Remember overloading!
 
-        // -- oopLecture.Dog Method Example --
+        // -- oopLecture.animalBonus.Dog Method Example --
 
-//            oopLecture.Dog d1 = new oopLecture.Dog();
+//            oopLecture.animalBonus.Dog d1 = new oopLecture.animalBonus.Dog();
 //            d1.age = 3;
 //            d1.breed = "corgi";
 //            d1.canBreed = false;
@@ -85,7 +85,7 @@ public class OopLecture {
 
         // -- oopLecture.DogHelper Example --
 
-//        oopLecture.Dog dog = new oopLecture.Dog();
+//        oopLecture.animalBonus.Dog dog = new oopLecture.animalBonus.Dog();
 //        dog.name = "Sparky";
 //        dog.age = 3;
 //        dog.callForDog("Sparky");//Sparky is now walking toward you!
@@ -94,7 +94,7 @@ public class OopLecture {
 //
 //        System.out.println(oopLecture.DogHelper.NUMBER_OF_DOG_BREEDS);
 //
-//        //Sparky's Age in oopLecture.Dog Years
+//        //Sparky's Age in oopLecture.animalBonus.Dog Years
 //        System.out.println(oopLecture.DogHelper.humanToDogYears(dog.age));
 
 

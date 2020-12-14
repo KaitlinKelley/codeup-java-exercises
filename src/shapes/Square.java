@@ -2,24 +2,21 @@ package shapes;
 
 public class Square extends Rectangle{
 
-    protected int side;
 
-    public Square(int side){
+    public Square(double side){
         super(side, side);
     }
 
     @Override
-    public int getArea(){
+    public double getArea(){
         System.out.println("Using Square class!");
-        int side = this.length;
-        return side*side;
+        return this.length*this.length;//inheriting the length and width properties from the Rectangle parent class
     }
 
     @Override
-    public int getPerimeter(){
+    public double getPerimeter(){
         System.out.println("Using Square class!");
-        int side = this.length;
-        return 4*side;
+        return 4*this.length;
     }
 
 

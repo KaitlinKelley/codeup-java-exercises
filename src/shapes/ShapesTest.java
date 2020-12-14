@@ -6,7 +6,7 @@ public class ShapesTest {
 
         Rectangle box1 = new Rectangle(5,4);
 
-        Rectangle box2 = new Square(5);
+        Rectangle box2 = new Square(5);//example of polymorphism!!!!!
 
         System.out.println(box1.getArea()); //20, uses rectangle class
 

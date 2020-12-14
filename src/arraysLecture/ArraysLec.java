@@ -35,14 +35,14 @@ public class ArraysLec {
 //            System.out.println(num);
 //        }
 
-        // Dog Example
-//        Dog d1 = new Dog("Bean", 1);
-//        Dog d2 = new Dog("Patch", 3);
-//        Dog d3 = new Dog("Rolo", 5);
+        // animalBonus.Dog Example
+//        animalBonus.Dog d1 = new animalBonus.Dog("Bean", 1);
+//        animalBonus.Dog d2 = new animalBonus.Dog("Patch", 3);
+//        animalBonus.Dog d3 = new animalBonus.Dog("Rolo", 5);
 //
 //
-//        //Declaring a Dog array variable called dogs and creating a new Dog array with a length of 4
-//        Dog[] dogs = new Dog[4];
+//        //Declaring a animalBonus.Dog array variable called dogs and creating a new animalBonus.Dog array with a length of 4
+//        animalBonus.Dog[] dogs = new animalBonus.Dog[4];
 //        dogs[0] = d1;
 //        dogs[1] = d2;
 //        dogs[2] = d3;
@@ -56,11 +56,11 @@ public class ArraysLec {
          * System.out.println(dogs);
          *
          * When we print "dogs" you will get some version of this!
-         * [LarraysLecture.Dog;@___________
+         * [LarraysLecture.animalBonus.Dog;@___________
          *
          * [ = single dimension
          * L = array contains a class or interface
-         * arraysLecture.Dog = type of object (arraysLecture b/c in arraysLecture package)
+         * arraysLecture.animalBonus.Dog = type of object (arraysLecture b/c in arraysLecture package)
          */
 
 
@@ -196,11 +196,11 @@ public class ArraysLec {
         // Example 4: Arrays.sort(array, startIndex, toIndex)
         // Sorts array elements alphabetically/numerically 2nd and 3rd arguments are optional.
 
-//        String[] animals = {"Dog", "Rabbit", "Cat", "Snake", "Fish"};
-//        System.out.println(Arrays.toString(animals)); //[Dog, Rabbit, Cat, Snake, Fish]
+//        String[] animals = {"animalBonus.Dog", "Rabbit", "animalBonus.Cat", "Snake", "animalBonus.Fish"};
+//        System.out.println(Arrays.toString(animals)); //[animalBonus.Dog, Rabbit, animalBonus.Cat, Snake, animalBonus.Fish]
 //
 //        Arrays.sort(animals);
-//        System.out.println(Arrays.toString(animals)); //[Cat, Dog, Fish, Rabbit, Snake] (animals sorted in alphabetical order!)
+//        System.out.println(Arrays.toString(animals)); //[animalBonus.Cat, animalBonus.Dog, animalBonus.Fish, Rabbit, Snake] (animals sorted in alphabetical order!)
 //
 //        System.out.println("===========================");
 //        String[] animals2 = {"Marmot", "Kinkajou", "Pangolin", "Fruit Bat", "Cougar", "Iguana"};

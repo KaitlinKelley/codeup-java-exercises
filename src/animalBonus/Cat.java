@@ -1,4 +1,6 @@
-public class Cat extends Animal{
+package animalBonus;
+
+public class Cat extends Animal {
 
     public Cat(int numberOfLegs, String preferredClimate){
         super(numberOfLegs, preferredClimate);
@@ -19,5 +21,10 @@ public class Cat extends Animal{
         animalInfo += "The coat pattern is: " + getCoatPattern() + "\n";
         return animalInfo;
     }
+
+
+
+
+
 
 }
