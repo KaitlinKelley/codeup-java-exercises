@@ -2,6 +2,8 @@ package movies;
 
 import util.Input;
 
+import java.util.Scanner;
+
 public class MoviesApplication {
 
     public static void main(String[] args){
@@ -15,6 +17,7 @@ public class MoviesApplication {
         do{
             displayChoices();
             int userChoice = userInput.getInt();
+            boolean yesOrNo = userInput.yesNo();
 
             if(userChoice == 0){
                 System.out.println("Ok! Exiting program.");
@@ -24,37 +27,42 @@ public class MoviesApplication {
                     System.out.println("Here are ALL the films:");
                     System.out.println("-----------------------");
                     showAllMovies();
+//                    getConfirmation(userInput);
                 }else if(userChoice == 2){
                     System.out.println("Here are all the films in the Animated Category:");
                     System.out.println("-----------------------");
                     showAllAnimated();
+//                    getConfirmation(userInput);
                 }else if(userChoice == 3){
                     System.out.println("Here are all the films in the Drama Category:");
                     System.out.println("-----------------------");
                     showAllDrama();
+//                    getConfirmation(userInput);
                 }else if(userChoice == 4){
                     System.out.println("Here are all the films in the Horror Category:");
                     System.out.println("-----------------------");
                     showAllHorror();
+//                    getConfirmation(userInput);
                 }else if(userChoice == 5){
                     System.out.println("Here are all the films in the Sci-Fi Category:");
                     System.out.println("------------------------");
                     showAllSciFi();
+//                    getConfirmation(userInput);
                 }
 
-
-
-
-
-
             }
-
 
 
         }while(stillUsingApp);
 
 
     }
+
+
+
+
+
+
 
     public static void displayChoices(){
         System.out.println("What would you like to do?");
@@ -121,6 +129,17 @@ public class MoviesApplication {
         System.out.println("---------------");
         System.out.println();
     }
+
+//    public static void getConfirmation(Input userInput){
+//        boolean stillUsingApp;
+//        System.out.println("Would you like to continue? [y/n]");
+//        boolean yesOrNo = userInput.yesNo();
+//        if(!yesOrNo){
+//            stillUsingApp = false;
+//        }
+//    }
+
+
 
 
 

@@ -23,7 +23,7 @@ public class Input {
     }
 
     public boolean yesNo(){
-        System.out.println("Please enter either yes or no:");
+//        System.out.println("Please enter either yes or no:");
         String userYesOrNo = this.sc.nextLine().trim();
         //can also reuse getString() here
         if(userYesOrNo.equalsIgnoreCase("yes") || userYesOrNo.equalsIgnoreCase("y")){
