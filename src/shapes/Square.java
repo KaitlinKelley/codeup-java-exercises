@@ -11,20 +11,16 @@ public class Square extends Rectangle{
     @Override
     public int getArea(){
         System.out.println("Using Square class!");
-        return this.length*this.length;
+        int side = this.length;
+        return side*side;
     }
 
     @Override
     public int getPerimeter(){
         System.out.println("Using Square class!");
-        return 4*this.length;
+        int side = this.length;
+        return 4*side;
     }
 
-//    public int getArea(int side){
-//        return side*side;
-//    }
-//
-//    public int getPerimeter(int side){
-//        return 4*side;
-//    }
+
 }
