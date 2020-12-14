@@ -77,7 +77,7 @@ public class Input {
 //    }
 
     public int getInt(){
-        System.out.println("Please enter an integer:");
+//        System.out.println("Please enter an integer:");
         int userInt = this.sc.nextInt();
         return userInt;
         //or return this.sc.nextInt();
