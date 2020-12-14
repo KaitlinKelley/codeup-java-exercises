@@ -17,7 +17,8 @@ public class MoviesApplication {
         do{
             displayChoices();
             int userChoice = userInput.getInt();
-            boolean yesOrNo = userInput.yesNo();
+//            boolean yesOrNo = userInput.yesNo();
+//            Movie[] movieArray = MoviesArray.findAll();
 
             if(userChoice == 0){
                 System.out.println("Ok! Exiting program.");
@@ -55,7 +56,8 @@ public class MoviesApplication {
                     System.out.println("Please enter a category:");
                     String userCategory = userInput.getString().toLowerCase().trim();
                     Movie movieToAdd = new Movie(userTitle, userCategory);
-                    addMovie(movieArray, movieToAdd);
+                    Movie[] updatedArray = addMovie(movieArray, movieToAdd);
+
                 }
 
             }
