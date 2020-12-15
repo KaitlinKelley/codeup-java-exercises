@@ -47,13 +47,14 @@ public class Rectangle extends Quadrilateral implements Measurable {
         return super.getWidth();
     }
 
+    //These were defined as abstract in Quadrilateral, must have a body here
     @Override
     public void setLength(double length) {
-
+        this.length = length;
     }
 
     @Override
     public void setWidth(double width) {
-
+        this.width = width;
     }
 }

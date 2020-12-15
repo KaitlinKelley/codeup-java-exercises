@@ -2,8 +2,8 @@ package shapes;
 
 public class Square extends Quadrilateral{
 
-    protected double length;
-    protected double width;
+//    protected double length;
+//    protected double width;
 
 
 //    public Square(double side){
@@ -46,6 +46,7 @@ public class Square extends Quadrilateral{
         return super.getWidth();
     }
 
+    //Setters for the width and the length (Quadrilateral abstract class says we have to define these here
     @Override
     public void setLength(double length) {
         this.length = length;
