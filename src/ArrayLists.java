@@ -79,8 +79,10 @@ public class ArrayLists {
 
         // BONUS TODO: How can we get the list of roasts in alphabetical order?
 
-        Collections.sort(roasts);
+        Collections.sort(roasts); //alphabetical order
         System.out.println(roasts);
+        ;
+        roasts.sort(Collections.reverseOrder()); //reverse alphabetical orderesjk
 
     }
 }
