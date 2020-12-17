@@ -14,6 +14,10 @@ public class Student {
         ArrayList<Integer> grades = new ArrayList<>();
     }
 
+    public ArrayList<Integer> getGrades(){
+        return grades;
+    }
+
     public String getName(){
         return name;
     }
@@ -31,7 +35,8 @@ public class Student {
         return gradeSum/numOfGrades;
     }
 
-    public void displayAllGradesOneStudent(){
+
+    public static void displayAllGradesOneStudent(ArrayList<Integer> grades){
             System.out.println("All of this student's grades are as follows:");
         for(int grade: grades){
             System.out.println(grade);
