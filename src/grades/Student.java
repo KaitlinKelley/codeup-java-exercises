@@ -43,7 +43,7 @@ public class Student {
         }
     }
 
-    public static void displayAllUsernames(HashMap<String, Student> students){
+    public static void displayAllUsernames(Map<String, Student> students){
         students.forEach((key,value) -> System.out.print("|" + key + "|" + "      "));
     }
 
