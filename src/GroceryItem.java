@@ -6,7 +6,7 @@ public class GroceryItem {
     private String name;
     private int quantity;
     private int category;
-    private ArrayList<GroceryItem> groceryList = new ArrayList<>();
+    public ArrayList<GroceryItem> groceryList = new ArrayList<>();
 
 
     public static void main(String[] args) {
@@ -36,6 +36,12 @@ public class GroceryItem {
 
     public void addItem(GroceryItem itemToAdd){
         groceryList.add(itemToAdd);
+    }
+
+    public static void displayAllItems(ArrayList<GroceryItem> groceryList){
+        for(GroceryItem item: groceryList){
+            System.out.println("Category: " + item.category + ", Item: " + item.name + ", Quantity: " + item.quantity);
+        }
     }
 
     public String getName() {
@@ -70,4 +76,12 @@ public class GroceryItem {
     public void setGroceryList(ArrayList<GroceryItem> groceryList) {
         this.groceryList = groceryList;
     }
+
+
+
+
+
+
+
+
 }
