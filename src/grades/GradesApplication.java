@@ -59,16 +59,16 @@ public class GradesApplication {
             if(!students.containsKey(userTypes)){
                 System.out.println("Sorry, we do not have a student by that username");
                 System.out.println("Would you like to see another student?");
-                boolean yesOrNO = userInput.yesNo();
-                if(!yesOrNO){
+                boolean yesOrNo = userInput.yesNo();
+                if(!yesOrNo){
                     System.out.println("Ok. Exiting app.");
                     stillUsingApp = false;
                 }
             }else if(students.containsKey(userTypes)){
                 Student.findAndDisplayStudent(students, userTypes);
                 System.out.println("Would you like to see another student?");
-                boolean yesOrNO = userInput.yesNo();
-                if(!yesOrNO){
+                boolean yesOrNo = userInput.yesNo();
+                if(!yesOrNo){
                     System.out.println("Ok. Exiting app.");
                     stillUsingApp = false;
                 }

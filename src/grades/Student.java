@@ -7,11 +7,11 @@ import java.util.Map;
 public class Student {
 
     private String name;
-    private ArrayList<Integer> grades = new ArrayList<>();
+    private ArrayList<Integer> grades;
 
     public Student(String name){
         this.name = name;
-        ArrayList<Integer> grades = new ArrayList<>();
+        this.grades = new ArrayList<>();
     }
 
     public ArrayList<Integer> getGrades(){
@@ -23,7 +23,7 @@ public class Student {
     }
 
     public void addGrade(int grade){
-        grades.add(grade);
+        this.grades.add(grade);
     }
 
     public double getGradeAverage(){
