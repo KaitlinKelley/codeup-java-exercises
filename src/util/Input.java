@@ -77,10 +77,12 @@ public class Input {
 //    }
 
     public int getInt(){
-//        System.out.println("Please enter an integer:");
-        int userInt = this.sc.nextInt();
-        return userInt;
-        //or return this.sc.nextInt();
+        try{
+            return Integer.valueOf(getString());
+        }catch (NumberFormatException e){
+            System.out.println("Input must be an integer.");
+            return getInt();
+        }
     }
 
     public int getInt(String prompt){
@@ -104,8 +106,12 @@ public class Input {
 
     public double getDouble(){
         System.out.println("Please enter a value of type double:");
-        double userDouble = this.sc.nextDouble();
-        return userDouble;
+        try {
+            return Double.valueOf(getString());
+        }catch(NumberFormatException e){
+            System.out.println("Input must be a double!");
+            return getDouble();
+        }
     }
 
 
