@@ -93,7 +93,7 @@ public class Input {
 
     public double getDouble(double min, double max){
         System.out.printf("Please enter a decimal value between %.2f and %.2f:%n", min, max);
-        double userDouble = this.sc.nextDouble();
+        double userDouble = Double.valueOf(getString());
         if(userDouble > max || userDouble < min){
             System.out.println("That number is out of range.");
             return getDouble(min, max);
