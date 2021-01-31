@@ -1,0 +1,123 @@
+
+================================= JAVA INTRO READING QUESTIONS
+What is the difference between a .java and .class file?
+--.java file is where the programmer writes the initial code
+--.class file is the result of compiling the .java file
+
+Why are we using an IDE (IntelliJ) instead of a simple text editor for writing Java code?
+--automates the compile-run process
+--auto-complete features, code analysis tools
+
+
+What is the difference between a JRE and a JDK?
+--JRE=Java Runtime Environment, JDK=Java Development Kit
+--JDK contains JRE
+--JRE is necessary to run Java applications, JDK is necessary to create and build Java applications
+--as developers, we need the JDK
+
+Are we currently learning about JavaSE, JavaEE, JavaME, or JavaFX?
+--Java SE(standard edition) and Java EE(enterprise edition)
+
+What are some key differences between JavaScript and Java?
+--Java is compiled, JavaScript is interpreted (and therefore tends to be faster)
+--Java is statically typed, JavaScript has dynamic typing (must specify data type for variable)
+--Java focuses more on objects, also uses/defines objects differently
+--JavaScript is limited to running mostly in the browser, Java runs almost everywhere
+
+Describe in some detail the process by which a Java program is able to run on an operating system.
+--**JVM = Java Virtual Machine**, acts as a run-time engine to run Java applications, interprets bytecode*******
+--Programmer writes code in a .java file...plain-text, human-readable code
+--The source code is compiled
+--Then, the .java file is compiled with the javac tool (the use of javac tool will be automated by an IDE or build tool)
+--The output of the previous step results in a file with an extension of class --> this file contains JVM Bytecode (lower-level language that maps closely to specific instructions that a computer's processor executes) --> might see compile-time errors as opposed to run-time errors
+--the compiled bytecode runs on the jvm
+--the jvm now interprets the bytecode, turning it into machine code that is read directly by a computer's processor --> the bytecode that is run by the jvm is the same no matter what type of computer is running it, but the implementation of the jvm varies from environment to environment. This is because machine code is different for every type of computer processor
+--at this stage, might see run-time errors as well as the actual output of the program...then we use the java command line to execute class files
+
+Why is Java touted as a “write once, run anywhere” language?
+--WORA
+--a programmer can develop Java code on one system, and expect it to run properly on any other Java-enabled system, with no adjustments (possible due to JVM)
+
+
+# Intro to Java
+
+## Java Highlights
+
+- one of the most widely used programming languages in history
+- strong continuing demand for Java developers
+- often used in Computer Science programs as an introduction to programming
+- predominantly used in enterprise web app development and Android mobile development
+- developed at Sun Microsystems in the early nineties (primary designer, James Gosling)
+- Java was made to be fast, secure, and flexible enough to run on any hardware and OS
+
+## JavaScript vs. Java
+
+- Hamburger vs. Ham (languages are not directly related)
+- JavaScript primarily runs on a browser engine... Java on any JVM on any machine
+- JavaScript is dynamically types (variables may be reassigned a different data type)... Java variables must be of a declared types and cannot be changed to a different type
+- Objects in JavaScript were mostly equivalent to a named index array... Java objects are entirely different
+- JavaScript statements may be inside or outside functions, arrays, objects, etc.... Java statements must be written inside methods inside a class
+- We will use JavaScript during this program for client-side (browser or front-end) scripting... we will use Java for server-side (back end) scripting
+- JavaScript is single-threaded... Java is multi-threaded
+- JavaScript is a relatively high-level language (lower performance, simpler syntax)... Java is more a mid-level language (higher performance, more explicit syntax)
+
+
+
+## How Java Runs
+
+1. Programmer writes source code in a .java file (the following additional steps may be done automatically by an IDE or manually)
+1. .java file is compiled by the Java Compiler into a .class file that contains Java bytecode instructions (normally hexadecimal/binary code that map to Java opcodes)
+1. .class file may then be run on the JVM (Java Virtual Machine)
+1. the JVM implements the bytecode instructions in a specific operating system way, depending on which JVM version the code is running on
+
+
+
+
+What is the difference between compiled and interpreted languages? Static and dynamic? Which is Java, which is JavaScript?
+--Java is compiled, JavaScript is interpreted
+--Java is statically-typed, JavaScript is dynamically-typed
+--Static --> data types must be explicitly defined, and variables cannot be changed to a different data type
+--Compiled --> tends to run faster
+
+What does a compiler do?
+--translates human-readable source code into machine code that the computer can read
+
+What is a virtual machine?
+--a computer file that behaves like an actual computer
+--gives the user the same experience as working on the host operating system itself
+--software inside a virtual machine can't escape or tamper with the computer itself
+
+What is the difference between bytecode and source code files?
+--source code is human-readable code written by the programmer
+--bytecode is a result of compiling the source code, can be universally read and then tranlated into whatever machine code a particulare OS needs
+
+Do you need the JDK or the JRE to play minecraft?
+--JRE
+
+Why would you use an IDE as opposed to a simple text editor when writing Java code?
+--compiling is automated, autocomplete features, code analysis tools
+
+What is the purpose of the out directory?
+--to keep compiled java files separate from the source code
+
+Why does Java have multiple number data types? Why use one over the other?
+--each numberic type takes up a different amount of memory(bytes)
+--try to use the smallest amount of data possible to accomplish a task, so you don't run out of memory
+
+Is a string a primative type in Java?
+--No, it is a reference type
+
+What is the difference between explicit and implicit casting? What are specific examples?
+--implicit casting = widening = automatic type conversion
+--implicit --> pouring contents of smaller cup into bigger cup, requires no extra syntax
+--implicit --> assigning a value of a less precise data type to a variable whose type is of a higher precision (going from more specific to less specific)
+--explicit casting = narrowing
+--explicit --> pouring contents of larger cup into a smaller cup, MIGHT fit, might NOT fit (overflow with looping can happen)
+--explicit --> requires the use of parentheses
+
+What are some differences between char and String types?
+--char is a single character, primitive type, uses single quotes
+--String is a reference type, uses double quotes
+
+What happens if you store a number in a variable greater than the data type’s constraints?
+--compiler error???
